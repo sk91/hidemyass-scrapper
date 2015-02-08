@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node --captureExceptions --autoTest --watchFolders ./ test/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "async": "^0.9.0",
-    "request": "^2.52.0"
+    "request": "^2.52.0",
+    "scrappers": "git+ssh://git@bitbucket.org:sk91/scrappers.git"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "cheerio": "^0.18.0",
+    "jasmine-node": "^2.0.0-beta4"
+  }
 }

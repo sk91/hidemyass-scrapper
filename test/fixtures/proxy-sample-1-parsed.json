@@ -4,8 +4,8 @@
   "port": 8123,
   "country": "China",
   "protocol": "https",
-  "anonymity": "hight",
+  "anonymity": "high",
   "speed": 6428,
   "connection_time": 299,
-  "keep-alive": true
+  "keep_alive": true
 }

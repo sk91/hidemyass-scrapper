@@ -4,8 +4,8 @@
   "port": 80,
   "country": "Netherlands Antilles",
   "protocol": "http",
-  "anonymity": "hight",
+  "anonymity": "high",
   "speed": 8095,
   "connection_time": 2071,
-  "keep-alive": true
+  "keep_alive": true
 }

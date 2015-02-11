@@ -7,6 +7,12 @@ describe("proxies page parser", function(){
 		parser = new ProxyParser();
 	});
 
+	it("should parse proxy page", function(){
+		var fixture = read_and_load_html("page-sample-1.html");
+		parsed = parser.parse(fixture);
+		expect(parsed.length).toBe(50);
+	});
+
 	it("should parse proxy", function(){
 		var fixture = read_and_load_html('proxy-sample-1.html');
 		var expected = read_json('proxy-sample-1-parsed.json');
@@ -15,10 +21,15 @@ describe("proxies page parser", function(){
 		
 		fixture = read_and_load_html('proxy-sample-2.html');
 		expected = read_json('proxy-sample-2-parsed.json');
-		parsed = parser.parseProxy(fixture);
+		parsed = parser.parseProxy(fixture('tr'), fixture);
 		expect(parsed).toEqual(expected);
 	});
 
+	it("should parse last update time", function(){
+		var fixture = read_and_load_html('updated-sample.html');
+		expect(parser.parseLastUpdated(fixture('td'), fixture))
+			.toEqual(1423404784);
+	});
 
 	it("should parse ip", function(){
 		var fixture = read_and_load_html('ip-sample.html');
@@ -41,7 +52,10 @@ describe("proxies page parser", function(){
 	it("should parse country", function(){
 		var fixture = read_and_load_html('country-sample.html');
 		expect(parser.parseCountry(fixture('td'), fixture))
-			.toEqual("China");
+			.toEqual({
+				slag: "cn",
+				name: "China"
+			});
 	});
 
 	it("should parse speed", function(){

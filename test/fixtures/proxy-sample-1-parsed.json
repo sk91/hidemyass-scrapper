@@ -2,10 +2,13 @@
   "updated": 1423404784,
   "ip": "183.221.217.163",
   "port": 8123,
-  "country": "China",
-  "protocol": "https",
-  "anonymity": "high",
+  "country": {
+  	"name": "China",
+  	"slag": "cn"
+  },
   "speed": 6428,
   "connection_time": 299,
+  "protocol": "https",
+  "anonymity": "high",
   "keep_alive": true
 }

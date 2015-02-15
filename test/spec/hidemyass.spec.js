@@ -17,7 +17,7 @@ describe("hide my ass", function(){
 		});
 	});
 	it("should parse page", function(done){
-		hidemyass.proxies().get(function(err, proxies){
+		hidemyass.proxies_page().get(function(err, proxies){
 			expect(proxies).toBeTruthy();
 			expect(proxies.length).toBe(50);
 			done();
@@ -25,7 +25,7 @@ describe("hide my ass", function(){
 	});
 
 	it("should parse page count", function(done){
-		hidemyass.proxies_pages().get(function(err, num){
+		hidemyass.proxies_pages_num().get(function(err, num){
 			expect(num).toBe(27);
 			done();
 		});
@@ -37,7 +37,7 @@ describe("hide my ass", function(){
 			expect(req.url).toBe('/');
 			done();
 		}
-		hidemyass.proxies().get({page: 1, url: 'http://localhost/'}, function(){});
+		hidemyass.proxies_page().get({page: 1, url: 'http://localhost/'}, function(){});
 	});
 
 	it("should go correctly to page 2", function(done){
@@ -45,6 +45,15 @@ describe("hide my ass", function(){
 			expect(req.url).toBe('/2');
 			done();
 		}
-		hidemyass.proxies().get({page: 2, url: 'http://localhost/'}, function(){});
+		hidemyass.proxies_page().get({page: 2, url: 'http://localhost/'}, function(){});
+	});
+
+
+	it("should go correctly to page 18", function(done){
+		stub.requestTest = function(req){
+			expect(req.url).toBe('/18');
+			done();
+		}
+		hidemyass.proxies_page().get({page: 18, url: 'http://localhost/'}, function(){});
 	});
 });

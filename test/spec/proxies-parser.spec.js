@@ -32,9 +32,13 @@ describe("proxies page parser", function(){
 	});
 
 	it("should parse ip", function(){
-		var fixture = read_and_load_html('ip-sample.html');
+		var fixture = read_and_load_html('ip-sample-1.html');
 		expect(parser.parseIp(fixture('td'), fixture))
 			.toEqual("183.221.217.163");
+
+		fixture = read_and_load_html('ip-sample-2.html');
+		expect(parser.parseIp(fixture('td'), fixture))
+			.toEqual("49.1.245.240");
 	});
 
 	it("should parse fake classnames", function(){

@@ -25,7 +25,7 @@ describe("hide my ass", function(){
 	});
 
 	it("should parse page count", function(done){
-		hidemyass.proxies_pages_num().get(function(err, num){
+		hidemyass.proxie_pages_count().get(function(err, num){
 			expect(num).toBe(27);
 			done();
 		});
@@ -55,5 +55,13 @@ describe("hide my ass", function(){
 			done();
 		}
 		hidemyass.proxies_page().get({page: 18, url: 'http://localhost/'}, function(){});
+	});
+
+	it("should parse all pages", function(done){
+		stub.response = read_html('simple_proxies_mock.html');
+		hidemyass.proxies().get({ url: 'http://localhost/'}, function(err, proxies){
+			expect(proxies.length).toBe(27);
+			done();
+		});
 	});
 });

@@ -1,4 +1,4 @@
-var PageNumParser = require('../../lib/page-num-parser');
+var PageNumParser = require('../../lib/pages-count-parser');
 
 describe("Number of proxie pages parser", function(){
 	var fixture1 = read_and_load_html('pagination-sample-1.html');
@@ -14,6 +14,4 @@ describe("Number of proxie pages parser", function(){
 		expect(parser.parse(fixture1)).toEqual(27);
 		expect(parser.parse(fixture2)).toEqual(14);
 	});
-
-
 });

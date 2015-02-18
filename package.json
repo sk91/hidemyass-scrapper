@@ -6,7 +6,16 @@
   "scripts": {
     "test": "jasmine-node --captureExceptions --autoTest --watchFolders ./ test/"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/sk91/hidemyass"
+  },
+  "keywords": [
+    "hidemyass",
+    "scrap",
+    "api"
+  ],
+  "author": "Kovalov Maxim",
   "license": "ISC",
   "dependencies": {
     "async": "^0.9.0",
@@ -15,7 +24,6 @@
     "scrappers": "git+https://bitbucket.org/sk91/scrappers.git#master",
     "url-join": "0.0.1"
   },
-  "private": true,
   "devDependencies": {
     "cheerio": "^0.18.0",
     "jasmine-node": "^2.0.0-beta4",

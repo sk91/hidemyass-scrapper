@@ -25,7 +25,7 @@ describe("hide my ass", function(){
 	});
 
 	it("should parse page count", function(done){
-		hidemyass.proxie_pages_count().get(function(err, num){
+		hidemyass.proxies_page().countPages(function(err, num){
 			expect(num).toBe(27);
 			done();
 		});

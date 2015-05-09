@@ -5,7 +5,7 @@ This library should provide an api for www.hidemyass.com proxy list.
 ##Setup
 
 ```
-npm install --save hidemyass-scrapper
+npm install --save hidemyass
 ```
 
 ##Usage

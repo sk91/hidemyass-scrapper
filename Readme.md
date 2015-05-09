@@ -108,10 +108,3 @@ To run test use the following command:
 ```
 npm test
 ```
-
-###Contributions
-Contributions can be submitted to https://bitbucket.org/sk91/hidemyass
-Pull request should be mergeable and unit tested.
-
-
-

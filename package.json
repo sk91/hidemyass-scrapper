@@ -4,24 +4,29 @@
   "description": "A library to scrap hidemyass proxies",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine-node --captureExceptions --autoTest --watchFolders ./ test/"
+    "test": "jasmine-node --captureExceptions  test/"
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/sk91/hidemyass"
+    "url": "https://github.com/sk91/hidemyass-scrapper"
+  },
+  "bugs": {
+    "url": "https://github.com/sk91/hidemyass-scrapper/issues"
   },
   "keywords": [
     "hidemyass",
     "scrap",
-    "api"
+    "api",
+    "proxy",
+    "proxy scrapper"
   ],
-  "author": "Kovalov Maxim",
-  "license": "ISC",
+  "author": "Maxim Kovalov <max.kovalov@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
     "lodash": "^3.1.0",
     "request": "^2.52.0",
-    "scrappers": "git+https://bitbucket.org/sk91/scrappers.git#master",
+    "scrappers": "^2.0.0",
     "url-join": "0.0.1"
   },
   "devDependencies": {

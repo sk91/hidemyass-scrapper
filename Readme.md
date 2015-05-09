@@ -10,7 +10,7 @@ npm install git+https://bitbucket.org/sk91/hidemyass.git
 
 ##Usage
 ###List Proxies
-####All 
+####All
 ```
 var hidemyass = require('hidemyass');
 

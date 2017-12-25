@@ -2,7 +2,7 @@ var ProxyParser = require('../../lib/proxies-parser');
 
 describe("proxies page parser", function(){
 	var parser;
-	
+
 	beforeEach(function(){
 		parser = new ProxyParser();
 	});
@@ -18,7 +18,7 @@ describe("proxies page parser", function(){
 		var expected = read_json('proxy-sample-1-parsed.json');
 		parsed = parser.parseProxy(fixture('tr'), fixture);
 		expect(parsed).toEqual(expected);
-		
+
 		fixture = read_and_load_html('proxy-sample-2.html');
 		expected = read_json('proxy-sample-2-parsed.json');
 		parsed = parser.parseProxy(fixture('tr'), fixture);

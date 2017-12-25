@@ -1,6 +1,6 @@
 {
   "name": "hidemyass",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A library to scrap hidemyass proxies",
   "main": "index.js",
   "scripts": {
@@ -20,18 +20,21 @@
     "proxy",
     "proxy scrapper"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "author": "Maxim Kovalov <max.kovalov@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "async": "^0.9.0",
-    "lodash": "^3.1.0",
-    "request": "^2.52.0",
-    "scrappers": "^2.0.0",
+    "async": "0.9.0",
+    "lodash": "3.1.0",
+    "request": "2.52.0",
+    "scrappers": "2.0.0",
     "url-join": "0.0.1"
   },
   "devDependencies": {
-    "cheerio": "^0.18.0",
-    "jasmine-node": "^2.0.0-beta4",
-    "mitm": "^1.0.3"
+    "cheerio": "0.18.0",
+    "jasmine-node": "2.0.0",
+    "mitm": "1.3.3"
   }
 }

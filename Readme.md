@@ -1,16 +1,18 @@
-#Hidemyass Scrapper
+# Hidemyass Scrapper
+
+[![Build Status](https://travis-ci.org/sk91/hidemyass-scrapper.svg?branch=master)](https://travis-ci.org/sk91/hidemyass-scrapper)
 
 This library should provide an api for www.hidemyass.com proxy list.
 
-##Setup
+## Setup
 
 ```
 npm install --save hidemyass
 ```
 
-##Usage
-###List Proxies
-####All
+## Usage
+### List Proxies
+#### All
 ```
 var hidemyass = require('hidemyass');
 
@@ -25,7 +27,7 @@ function got_proxies(err, proxies){
     console.log(proxies);
 }
 ```
-####Range
+#### Range
 ```
 var hidemyass = require('hidemyass');
 
@@ -40,7 +42,7 @@ function got_proxies(err, proxies){
     console.log(proxies);
 }
 ```
-###Get Proxies from specific page
+### Get Proxies from specific page
 ```
 var hidemyass = require('hidemyass');
 
@@ -55,7 +57,7 @@ function got_proxies(err, proxies){
     console.log(proxies);
 }
 ```
-###Count number of active proxy pages
+### Count number of active proxy pages
 ```
 var hidemyass = require('hidemyass');
 
@@ -71,7 +73,7 @@ function got_pages(err, pages){
 }
 ```
 
-##Output example:
+## Output example:
 ```
 [ { updated: 1424204283,
     ip: '180.183.206.107',
@@ -102,8 +104,8 @@ function got_pages(err, pages){
     keep_alive: true } ]
 ```
 
-##Development
-###Tests
+## Development
+### Tests
 To run test use the following command:
 ```
 npm test

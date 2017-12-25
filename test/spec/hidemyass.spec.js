@@ -16,6 +16,9 @@ describe("hide my ass", function(){
 			res.end(stub.response);
 		});
 	});
+	afterEach(function(){
+		mitm.disable();
+	});
 	it("should parse page", function(done){
 		hidemyass.proxies_page().get(function(err, proxies){
 			expect(proxies).toBeTruthy();
@@ -34,6 +37,7 @@ describe("hide my ass", function(){
 
 	it("should go correctly to page 1", function(done){
 		stub.requestTest = function(req){
+			console.log(req.url);
 			expect(req.url).toBe('/');
 			done();
 		}
